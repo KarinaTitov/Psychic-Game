@@ -7,7 +7,7 @@ header {
     margin: 0 auto;
 }
 
-.underscore {
+#underscore {
     height: 150px;
     width: 80%;
     border: 1px solid black;
@@ -16,7 +16,7 @@ header {
     margin: 0 auto;
 }
 
-.rightguess {
+#rightguess {
     height: 150px;
     width: 80%;
     border: 1px solid black;
@@ -25,7 +25,7 @@ header {
     margin: 0 auto;
 }
 
-.wrongguess {
+#wrongguess {
     height: 150px;
     width: 80%;
     border: 1px solid black;
