@@ -1,31 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hangman</title>
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-
+    <title>Hangman!</title>
 </head>
 <body>
-    <h1>HangMan</h1>
+    <h1>Countries</h1>
+
+    <p id="rightguess">Right Guess:</p>
+    <p id="wrongguess">Wrong Guess:</p>
+    <p id="underscores">"_"</p>
+    <p id="remainingletters"></p>
+
+
+
+
+
+    <script>
+    // Array of words
+    var words = [
+      "France",
+      "Kazakhstan",
+      "Russia",
+      "America"
+    ];
+
+
+    
+    // CHoose random word
+    var word = words[Math.floor(Math.random() * words.length)];
+    
+    // Answer Array
+    var answerArray = [];
+    for (var i = 0; i < word.length; i++) {
+      answerArray[i] = "_";
+    }
+    
+    var remainingLetters = word.length;
+    var guesses = 20;
+    
+    // Game loop
+    while (remainingLetters > 0 && guesses > 0) {
+      // Condition of the game
+      console.log(answerArray.join(" "));
+      
+      // Request for answer
+      var guess = document.addEventListener() = ;
+      if (guess === null) {
+        // End of game loop
+        break;
+      } else if (guess.length !== 1) {
+        console.log("Please enter ONE letter");
+      } else {
+        guesses--;
+        guess = guess.toLowerCase();
+        // Refresh the game
+        for (var j = 0; j < word.length; j++) {
+          if (word[j] === guess && answerArray[j] === "_") {
+            answerArray[j] = guess;
+            remainingLetters--;
+          }
+        }
+      }
+    //The End
+    }
+    
+    // Show the answer
+    console.log(answerArray.join(" "));
+    if (guesses > 0) {
+      alert("Congratulations! The word was" + word);
+    } else {
+      console.log("Try again! The word was" + word);
+    }
+    </script>
 </body>
-<div class="container">
-    <header>
-        <h1>Hangman Game</h1>
-        <br/>
-        <h3>Countries</h3>
-    </header>
-    <br/>
-
-<div id="underscore">_ _ _ _</div>
-<br/>
-<div id="rightguess">right guess</div>
-<br/>
-<div id="wrongguess">wrong guess</div>
-
-<script src="assets/js/hangman.js"></script>
-
-</div>
 </html>
