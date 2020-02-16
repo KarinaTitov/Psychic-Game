@@ -1,76 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
+
 <head>
-    <title>Hangman!</title>
+	<meta charset="UTF-8">
+  <title>Psychic Game</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+	<script type="text/javascript" src="assets/js/game.js"></script>
 </head>
 <body>
-    <h1>Countries</h1>
+  <header>
+		<div class="container">
+			<h1>The Psychic Game</h1>
+		</div>
+	</header>
 
-    <p id="rightguess">Right Guess:</p>
-    <p id="wrongguess">Wrong Guess:</p>
-    <p id="underscores">"_"</p>
-    <p id="remainingletters"></p>
-
-
-
-
-
-    <script>
-    // Array of words
-    var words = [
-      "France",
-      "Kazakhstan",
-      "Russia",
-      "America"
-    ];
+	<div id="psychicgame" class="main-container">
+		<p>Guess what letter I'm thinking of!</p>
+		<p>Wins: 0</p>
+    <p>Losses: 0</p>
+    <p>Attempts left: 9</p>
+    <p>Your guesses: </p>
+	</div>
 
 
-    
-    // CHoose random word
-    var word = words[Math.floor(Math.random() * words.length)];
-    
-    // Answer Array
-    var answerArray = [];
-    for (var i = 0; i < word.length; i++) {
-      answerArray[i] = "_";
-    }
-    
-    var remainingLetters = word.length;
-    var guesses = 20;
-    
-    // Game loop
-    while (remainingLetters > 0 && guesses > 0) {
-      // Condition of the game
-      console.log(answerArray.join(" "));
-      
-      // Request for answer
-      var guess = document.addEventListener() = ;
-      if (guess === null) {
-        // End of game loop
-        break;
-      } else if (guess.length !== 1) {
-        console.log("Please enter ONE letter");
-      } else {
-        guesses--;
-        guess = guess.toLowerCase();
-        // Refresh the game
-        for (var j = 0; j < word.length; j++) {
-          if (word[j] === guess && answerArray[j] === "_") {
-            answerArray[j] = guess;
-            remainingLetters--;
-          }
-        }
-      }
-    //The End
-    }
-    
-    // Show the answer
-    console.log(answerArray.join(" "));
-    if (guesses > 0) {
-      alert("Congratulations! The word was" + word);
-    } else {
-      console.log("Try again! The word was" + word);
-    }
-    </script>
+	 
+
 </body>
 </html>

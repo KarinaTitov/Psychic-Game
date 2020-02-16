@@ -1,35 +1,16 @@
+body {
+    background-image: url("https://i.ytimg.com/vi/aZwev9_Y58A/maxresdefault.jpg");
+}
+
+
 header {
-    height: 300px;
-    width: 80%;
-    border: 1px solid black;
-    font-size: 20px;
-    text-align: center;
-    margin: 0 auto;
+ text-align: center;
+ font-size: 100px;
+ font-weight: 700;
 }
 
-#underscore {
-    height: 150px;
-    width: 80%;
-    border: 1px solid black;
-    font-size: 100px;
+p {
+    font-size: 30px;
     text-align: center;
-    margin: 0 auto;
-}
-
-#rightguess {
-    height: 150px;
-    width: 80%;
-    border: 1px solid black;
-    font-size: 20px;
-    text-align: center;
-    margin: 0 auto;
-}
-
-#wrongguess {
-    height: 150px;
-    width: 80%;
-    border: 1px solid black;
-    font-size: 20px;
-    text-align: center;
-    margin: 0 auto;
+    margin: 50px;
 }
